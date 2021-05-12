@@ -1,3 +1,5 @@
+import * as Alexa from "ask-sdk-core";
+
 export const SessionEndedRequestHandler = {
   canHandle(handlerInput) {
     return (

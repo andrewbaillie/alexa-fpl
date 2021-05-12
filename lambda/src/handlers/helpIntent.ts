@@ -1,3 +1,5 @@
+import * as Alexa from "ask-sdk-core";
+
 export const HelpIntentHandler = {
   canHandle(handlerInput) {
     return (
