@@ -8,7 +8,7 @@ export const LaunchRequestHandler = {
   },
   handle(handlerInput) {
     const speakOutput =
-      "Welcome to Fantasy Premier League, I've got access to most of the FPL website and can retrieve your game stats. Where would you like to start?";
+      "Welcome to Fantasy Premier League, I've got access to most of the FPL website and can retrieve your game stats. Before we begin can you tell me your FPL ID?";
     return handlerInput.responseBuilder
       .speak(speakOutput)
       .reprompt(speakOutput)

@@ -41,6 +41,16 @@
         {
           "name": "AMAZON.NavigateHomeIntent",
           "samples": []
+        },
+        {
+          "name": "userFPLId",
+          "slots": [
+            {
+              "name": "fplid",
+              "type": "AMAZON.NUMBER"
+            }
+          ],
+          "samples": ["my id is {fplid}", "my fpl id is {fplid}"]
         }
       ],
       "types": []
