@@ -2,10 +2,10 @@
   "manifest": {
     "publishingInformation": {
       "locales": {
-        "en-US": {
-          "summary": "Sample Short Description",
+        "en-GB": {
+          "summary": "FPL Skill",
           "examplePhrases": [
-            "Alexa open hello world",
+            "Alexa open fantasy premier league",
             "hello",
             "help"
           ],
