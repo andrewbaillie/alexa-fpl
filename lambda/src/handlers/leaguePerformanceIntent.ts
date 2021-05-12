@@ -14,20 +14,40 @@ export const LeaguePerformanceIntentHandler = {
 
     const myLeague = new League(sessionAttributes.fplId);
     await myLeague.preLoadData();
-    const league = await myLeague.getLeagueSummary();
-    const standing = await myLeague.getLeaguePosition();
+    const league = myLeague.getLeagueSummary();
+    const standing = myLeague.getLeaguePosition();
+    const nearestRivals = myLeague.getNearestRivals();
 
-    console.log(standing);
+    console.log(nearestRivals);
 
-    let speakOutput = `Here's an update on the ${league.name} league. Your team: ${standing.teamName} is currently in position ${standing.rank} with a total of ${standing.total} points.`;
+    let speakOutput = `Here's an update on the ${league.name} league. Your team: ${standing.teamName} is currently `;
 
-    // if (myUser.isGameweekInProgress()) {
-    //   speakOutput += `have scored ${perf.gameweekPoints} points so far this gameweek `;
-    // } else {
-    //   speakOutput += `scored ${perf.gameweekPoints} points in the last gameweek `;
-    // }
+    if (standing.rank === 1) {
+      speakOutput += `top of league! `;
+    } else {
+      speakOutput += `in position ${standing.rank} `;
+    }
 
-    // speakOutput += `for a total of ${perf.overallPoints} points`;
+    speakOutput += ` with a total of ${standing.total} points. `;
+
+    if (nearestRivals.above) {
+      const above = nearestRivals.above;
+      speakOutput += `${above.teamName} managed by ${
+        above.playerName
+      } is ahead of you, with a total of ${above.total} points, that's just ${
+        above.total - standing.total
+      } points. `;
+    }
+
+    if (nearestRivals.below) {
+      const below = nearestRivals.below;
+
+      speakOutput += `${below.teamName} managed by ${
+        below.playerName
+      } is below you, with a total of ${below.total} points, that's a massive ${
+        standing.total - below.total
+      } behind you. Almost so far you can't see them.`;
+    }
 
     return handlerInput.responseBuilder.speak(speakOutput).getResponse();
   }

@@ -19,23 +19,32 @@ export class League {
     if (!this.basicInfo) this.basicInfo = await this.fetchLeagueInfo();
   };
 
-  public getLeagueSummary = async (): Promise<LeagueInfo> => {
+  public getLeagueSummary = (): LeagueInfo => {
     return this.basicInfo;
   };
 
-  public getLeaguePosition = async (): Promise<LeagueStanding> => {
-    this.basicInfo.standings.map((s) => {
-      console.log(typeof this.playerId);
-      console.log(typeof s.playerId);
-      if (s.playerId === this.playerId) {
-        console.log("found");
-      }
-      console.log(s.playerId);
-    });
-
+  public getLeaguePosition = (): LeagueStanding => {
     return this.basicInfo.standings.filter(
       (s) => s.playerId === this.playerId
     )[0];
+  };
+
+  public getNearestRivals = () => {
+    const index = this.basicInfo.standings.findIndex(
+      (x) => x.playerId === this.playerId
+    );
+
+    const result = { above: null, below: null };
+
+    if (index > 0) {
+      result.above = this.basicInfo.standings[index - 1];
+    }
+
+    if (index + 1 < this.basicInfo.standings.length) {
+      result.below = this.basicInfo.standings[index + 1];
+    }
+
+    return result;
   };
 
   private fetchLeagueInfo = async (): Promise<LeagueInfo> => {
