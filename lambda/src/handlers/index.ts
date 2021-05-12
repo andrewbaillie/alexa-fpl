@@ -7,3 +7,4 @@ export * from "./launchRequest";
 export * from "./sessionEndedRequest";
 export * from "./playerMostCaptained";
 export * from "./userFPLIdIntent";
+export * from "./teamPerformanceIntent";

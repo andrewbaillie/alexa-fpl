@@ -51,6 +51,15 @@
             }
           ],
           "samples": ["my id is {fplid}", "my fpl id is {fplid}"]
+        },
+        {
+          "name": "TeamPerformance",
+          "slots": [],
+          "samples": [
+            "how's my team doing this week",
+            "whats my score this week",
+            "how many points have I scored this week"
+          ]
         }
       ],
       "types": []

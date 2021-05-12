@@ -8,7 +8,8 @@ import {
   IntentReflectorHandler,
   LaunchRequestHandler,
   SessionEndedRequestHandler,
-  UserFPLIDIntentHandler
+  UserFPLIDIntentHandler,
+  TeamPerformanceIntentHandler
 } from "./handlers";
 
 exports.handler = Alexa.SkillBuilders.custom()
@@ -17,6 +18,7 @@ exports.handler = Alexa.SkillBuilders.custom()
     UserFPLIDIntentHandler,
     HelloWorldIntentHandler,
     PlayerMostCaptainedIntentHandler,
+    TeamPerformanceIntentHandler,
     HelpIntentHandler,
     CancelAndStopIntentHandler,
     SessionEndedRequestHandler,

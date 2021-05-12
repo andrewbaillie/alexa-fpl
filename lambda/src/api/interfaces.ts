@@ -18,6 +18,7 @@ export interface GameWeekData {
   isCurrent: boolean;
   isPrevious: boolean;
   isNext: boolean;
+  isFinished: boolean;
   mostSelected: number;
   mostTransferredIn: number;
   mostCaptained: number;
@@ -28,4 +29,15 @@ export interface BootstrapData {
   players: PlayerData[];
   totalPlayers: number;
   gameweeks: GameWeekData[];
+}
+
+export interface UserBasicInfo {
+  firstName: string;
+  lastName: string;
+  overallPoints: number;
+  overallRank: number;
+  gameweekPoints: number;
+  gameweekRank: number;
+  teamName: string;
+  currentEvent: number;
 }

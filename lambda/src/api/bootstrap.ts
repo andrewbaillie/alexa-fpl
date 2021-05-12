@@ -60,6 +60,7 @@ export class fplbase {
         isCurrent: week.is_current,
         isPrevious: week.is_previous,
         isNext: week.is_next,
+        isFinished: week.finished,
         mostSelected: week.most_selected,
         mostTransferredIn: week.most_transferred_in,
         mostCaptained: week.most_captained
