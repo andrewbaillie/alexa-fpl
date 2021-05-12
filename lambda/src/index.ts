@@ -3,6 +3,7 @@ import {
   CancelAndStopIntentHandler,
   ErrorHandler,
   HelloWorldIntentHandler,
+  PlayerMostCaptainedIntentHandler,
   HelpIntentHandler,
   IntentReflectorHandler,
   LaunchRequestHandler,
@@ -13,6 +14,7 @@ exports.handler = Alexa.SkillBuilders.custom()
   .addRequestHandlers(
     LaunchRequestHandler,
     HelloWorldIntentHandler,
+    PlayerMostCaptainedIntentHandler,
     HelpIntentHandler,
     CancelAndStopIntentHandler,
     SessionEndedRequestHandler,

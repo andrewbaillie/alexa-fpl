@@ -8,6 +8,7 @@ export interface TeamData {
 export interface PlayerData {
   id: number;
   name: string;
+  gameweekPoints: number;
 }
 
 export interface GameWeekData {

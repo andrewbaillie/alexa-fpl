@@ -29,6 +29,16 @@
           ]
         },
         {
+          "name": "PlayerMostCaptained",
+          "slots": [],
+          "samples": [
+            "who is the most captained player this week",
+            "who did people captain most this week",
+            "who did people captain most",
+            "who is most captained"
+          ]
+        },
+        {
           "name": "AMAZON.NavigateHomeIntent",
           "samples": []
         }

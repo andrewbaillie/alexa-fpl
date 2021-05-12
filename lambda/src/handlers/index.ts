@@ -5,3 +5,4 @@ export * from "./helpIntent";
 export * from "./intentReflector";
 export * from "./launchRequest";
 export * from "./sessionEndedRequest";
+export * from "./playerMostCaptained";
