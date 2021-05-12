@@ -25,6 +25,9 @@ export const TeamPerformanceIntentHandler = {
 
     speakOutput += `for a total of ${perf.overallPoints} points`;
 
-    return handlerInput.responseBuilder.speak(speakOutput).getResponse();
+    return handlerInput.responseBuilder
+      .speak(speakOutput)
+      .reprompt("What else would you like to know?")
+      .getResponse();
   }
 };

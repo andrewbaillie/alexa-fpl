@@ -2,23 +2,23 @@ import * as Alexa from "ask-sdk-core";
 import {
   CancelAndStopIntentHandler,
   ErrorHandler,
-  HelloWorldIntentHandler,
   PlayerMostCaptainedIntentHandler,
   HelpIntentHandler,
   IntentReflectorHandler,
   LaunchRequestHandler,
   SessionEndedRequestHandler,
   UserFPLIDIntentHandler,
-  TeamPerformanceIntentHandler
+  TeamPerformanceIntentHandler,
+  LeaguePerformanceIntentHandler
 } from "./handlers";
 
 exports.handler = Alexa.SkillBuilders.custom()
   .addRequestHandlers(
     LaunchRequestHandler,
     UserFPLIDIntentHandler,
-    HelloWorldIntentHandler,
     PlayerMostCaptainedIntentHandler,
     TeamPerformanceIntentHandler,
+    LeaguePerformanceIntentHandler,
     HelpIntentHandler,
     CancelAndStopIntentHandler,
     SessionEndedRequestHandler,

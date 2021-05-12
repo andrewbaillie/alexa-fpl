@@ -41,3 +41,20 @@ export interface UserBasicInfo {
   teamName: string;
   currentEvent: number;
 }
+
+export interface LeagueStanding {
+  id: number;
+  gameweekPoints: number;
+  rank: number;
+  lastRank: number;
+  total: number;
+  teamName: string;
+  playerName: string;
+  playerId: number;
+}
+
+export interface LeagueInfo {
+  id: number;
+  name: string;
+  standings: LeagueStanding[];
+}

@@ -16,19 +16,6 @@
           "samples": []
         },
         {
-          "name": "HelloWorldIntent",
-          "slots": [],
-          "samples": [
-            "hello",
-            "how are you",
-            "say hi world",
-            "say hi",
-            "hi",
-            "say hello world",
-            "say hello"
-          ]
-        },
-        {
           "name": "PlayerMostCaptained",
           "slots": [],
           "samples": [
@@ -59,6 +46,16 @@
             "how's my team doing this week",
             "whats my score this week",
             "how many points have I scored this week"
+          ]
+        },
+        {
+          "name": "LeaguePerformance",
+          "slots": [],
+          "samples": [
+            "how am I doing in my leagues",
+            "where am I in the league",
+            "whats my league position",
+            "am i winning my league"
           ]
         }
       ],
