@@ -19,7 +19,12 @@
       "distributionCountries": []
     },
     "apis": {
-      "custom": {}
+      "custom": {
+        "endpoint": {
+          "uri": "https://focused-herbert-Jdx89i.bespoken.link",
+          "sslCertificateType": "Wildcard"
+        }
+      }
     },
     "manifestVersion": "1.0"
   }
